@@ -1,13 +1,13 @@
 {
-  "name": "@elizaos/eliza-starter",
+  "name": "seihub",
   "version": "0.25.9",
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts",
-    "start": "tsc && node --loader ts-node/esm src/index.ts",
+    "start": "tsc && node --loader ts-node/esm src/index.ts --character=\"./characters/sei.character.json\"",
     "clean": "./scripts/clean.sh",
-    "start:service:sei": "pm2 start pnpm --name=\"sei\" --restart-delay=3000 --max-restarts=10 -- run start --character=\"./characters/sei.character.json\"",
+    "start:service:sei": "pm2 start pnpm --name=\"sei\" --restart-delay=3000 --max-restarts=10 -- run start",
     "stop:service:sei": "pm2 stop sei"
   },
   "dependencies": {
